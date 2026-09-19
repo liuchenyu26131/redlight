@@ -15,7 +15,7 @@ const wavelengthRows = [
 ];
 
 const specColumns = [
-  { key: "item", label: "项目", width: "28%" },
+  { key: "item", label: "项目", width: "5em" },
   { key: "value", label: "规格" },
 ];
 
