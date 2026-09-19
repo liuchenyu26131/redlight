@@ -61,11 +61,9 @@ export function ArticleDoc() {
             opacity: 0.85,
           }}
         >
-          Made with{" "}
-          <a href="https://github.com/ConardLi/garden-skills" target="_blank" rel="noopener noreferrer">
-            beautiful-article
-          </a>{" "}
-          · vignelli theme
+          本平台所有内容为科普信息整理，仅供科研参考与信息分享，不构成医疗建议或疾病诊疗依据。<br />
+          请结合专业医师或营养师意见判断。© 2026 正分子营养
+        
         </footer>
       </Raw>
     </Article>
