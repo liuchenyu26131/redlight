@@ -37,10 +37,7 @@ export function WavelengthDepthExplainer({ variant = "inline" }: { variant?: "in
             <button type="button" className="iluxred-depth-modal__close" onClick={() => setOpen(false)} aria-label="关闭说明">关闭</button>
             <p className="iluxred-depth-modal__eyebrow">RED LIGHT KNOWLEDGE</p>
             <h2>不同波长红光穿透深度</h2>
-            <a className="iluxred-depth-image-link" href={wavelengthDepthImage} target="_blank" rel="noopener noreferrer">
-              <img src={wavelengthDepthImage} alt="不同波长红光穿透深度示意图" loading="eager" decoding="sync" />
-            </a>
-            <p className="iluxred-depth-image-hint">手机端如未自动显示，可点击图片单独打开查看。</p>
+            <img className="iluxred-depth-image" src={wavelengthDepthImage} alt="不同波长红光穿透深度示意图" loading="eager" decoding="sync" />
             <ul>
               <li><strong>660nm 红光：</strong>主要作用于皮肤表层。</li>
               <li><strong>810nm / 850nm 近红外：</strong>可到达更深层的肌肉和关节区域。</li>
