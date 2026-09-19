@@ -1,6 +1,7 @@
 import { Article, Aside, Detail, Hero, Lead, Raw, Section, Table } from "reacticle";
 import { blanketMedia } from "./blanketMedia";
 import { ZoomableImage } from "./ImageZoom";
+import { WavelengthDepthExplainer } from "./WavelengthDepthExplainer";
 import { navigateToView } from "./ViewTabs";
 
 const wavelengthColumns = [
@@ -139,6 +140,10 @@ export function BlanketDetail() {
       <Aside tone="warning" label="使用提醒">
         不能开着过夜。癌症患者、孕妇以及医嘱不能使用光疗的人群，使用前请咨询医生。
       </Aside>
+
+      <Raw title="">
+        <WavelengthDepthExplainer variant="footer" />
+      </Raw>
 
       <Raw title="">
         <footer className="iluxred-detail-footer">

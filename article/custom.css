@@ -919,3 +919,121 @@ html[data-iluxred-theme="dark"] .ra-root {
     top: 96px;
   }
 }
+.iluxred-depth-trigger {
+  appearance: none;
+  min-height: 48px;
+  padding: 0 var(--ra-space-4);
+  border: 1px solid var(--ra-color-accent);
+  background: transparent;
+  color: var(--ra-color-accent);
+  font: inherit;
+  font-weight: var(--ra-weight-bold);
+  cursor: pointer;
+}
+
+.iluxred-depth-trigger--inline {
+  justify-self: start;
+}
+
+.iluxred-depth-trigger--footer {
+  display: block;
+  width: 100%;
+  margin: var(--ra-space-5) 0;
+  border-color: var(--ra-color-border-strong);
+  color: var(--ra-color-text);
+  text-align: left;
+}
+
+.iluxred-depth-trigger:hover,
+.iluxred-depth-trigger:focus-visible {
+  background: var(--ra-color-accent);
+  border-color: var(--ra-color-accent);
+  color: var(--ra-color-accent-contrast);
+}
+
+.iluxred-depth-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 240;
+  display: grid;
+  place-items: center;
+  padding: var(--ra-space-4);
+  background: color-mix(in srgb, var(--ra-color-heading) 92%, transparent);
+}
+
+.iluxred-depth-modal__panel {
+  width: min(96vw, 920px);
+  max-height: 94vh;
+  overflow: auto;
+  padding: var(--ra-space-5);
+  background: var(--ra-color-bg);
+  color: var(--ra-color-text);
+  border-top: 5px solid var(--ra-color-accent);
+}
+
+.iluxred-depth-modal__close {
+  appearance: none;
+  display: block;
+  margin-left: auto;
+  min-width: 64px;
+  min-height: 44px;
+  border: 1px solid var(--ra-color-border-strong);
+  background: transparent;
+  color: var(--ra-color-text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.iluxred-depth-modal__eyebrow {
+  margin: var(--ra-space-3) 0 var(--ra-space-1);
+  color: var(--ra-color-accent);
+  font-family: var(--ra-font-mono);
+  font-size: var(--ra-text-xs);
+  letter-spacing: var(--ra-tracking-caps);
+}
+
+.iluxred-depth-modal h2 {
+  margin: 0 0 var(--ra-space-4);
+}
+
+.iluxred-depth-modal img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--ra-color-surface);
+}
+
+.iluxred-depth-modal ul {
+  margin: var(--ra-space-4) 0 0;
+  padding-left: 1.2em;
+}
+
+.iluxred-depth-modal li + li {
+  margin-top: var(--ra-space-2);
+}
+
+@media (max-width: 720px) {
+  .iluxred-depth-modal__panel {
+    padding: var(--ra-space-4);
+  }
+}
+.iluxred-detail-video {
+  display: grid;
+  justify-items: center;
+  gap: var(--ra-space-3);
+  margin: var(--ra-space-5) 0;
+}
+
+.iluxred-detail-video h2 {
+  justify-self: stretch;
+  margin: 0;
+  padding-bottom: var(--ra-space-2);
+  border-bottom: 2px solid var(--ra-color-heading);
+}
+
+.iluxred-detail-video video {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  background: var(--ra-color-heading);
+}
