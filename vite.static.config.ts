@@ -2,7 +2,7 @@ import { resolve } from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-const cdnRef = process.env.VITE_CDN_REF ?? "41b30e78401adec211d1a42fb0ebc43ed725e0e5";
+const cdnRef = process.env.VITE_CDN_REF ?? "62a700723a6fe7c1847bc9f20538eba5ce05cd6c";
 
 export default defineConfig({
   base: `https://fastly.jsdelivr.net/gh/liuchenyu26131/redlight@${cdnRef}/cdn/`,
