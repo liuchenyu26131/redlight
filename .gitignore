@@ -1,0 +1,7 @@
+node_modules/
+dist/
+article/article.html
+article/artifact/
+.vite/
+*.log
+.DS_Store
