@@ -7,15 +7,15 @@ type Result = Choice | "both";
 const resultCopy: Record<Result, { title: string; body: string }> = {
   lamp: {
     title: "更适合：ILUXRED 1500W 红光理疗灯",
-    body: "你的需求更偏向局部深层、面部护理、专业参数或固定安装空间。",
+    body: "你更偏向局部深层、面部护理和专业参数调节。",
   },
   blanket: {
     title: "更适合：红光能量毯",
-    body: "你的需求更偏向全身覆盖、颈部护理、操作简单和便携收纳。",
+    body: "你更偏向全身覆盖、颈部护理、操作简单和便携收纳。",
   },
   both: {
     title: "更适合：两款组合使用",
-    body: "你同时存在局部强化和全身覆盖需求，组合使用更容易覆盖不同场景。",
+    body: "你同时存在局部重点和全身覆盖需求，两款可以形成互补。",
   },
 };
 
@@ -23,13 +23,9 @@ export function SelectorQuiz() {
   const [answers, setAnswers] = useState<Choice[]>([]);
   const current = quizQuestions[answers.length];
 
-  function choose(value: Choice) {
-    setAnswers((currentAnswers) => [...currentAnswers, value]);
-  }
-
   if (!current) {
     const lampScore = answers.filter((answer) => answer === "lamp").length;
-    const result: Result = lampScore >= 3 ? "lamp" : lampScore <= 1 ? "blanket" : "both";
+    const result: Result = lampScore === 3 ? "lamp" : lampScore === 0 ? "blanket" : "both";
     const copy = resultCopy[result];
     return (
       <div className="iluxred-quiz__result" aria-live="polite">
@@ -50,7 +46,7 @@ export function SelectorQuiz() {
       <h3>{current.title}</h3>
       <div className="iluxred-quiz__options">
         {current.options.map((option) => (
-          <button key={option.label} type="button" className="iluxred-quiz__option" onClick={() => choose(option.value)}>
+          <button key={option.label} type="button" className="iluxred-quiz__option" onClick={() => setAnswers((items) => [...items, option.value])}>
             {option.label}
           </button>
         ))}

@@ -1,51 +1,44 @@
 import { Article, Conclusion, Hero, Lead, Raw } from "reacticle";
-import { SectionOverview } from "./sections/01-overview";
-import { SectionMatrix } from "./sections/02-matrix";
+import { SectionDecision } from "./sections/01-decision";
+import { SectionSelector } from "./sections/02-selector";
 import { SectionDifferences } from "./sections/03-differences";
-import { SectionLampFeatures } from "./sections/04-lamp-features";
-import { SectionBlanketFeatures } from "./sections/05-blanket-features";
-import { SectionBlanketInfo } from "./sections/06-blanket-info";
-import { SectionAudience } from "./sections/07-audience";
-import { SectionPurchase } from "./sections/08-purchase";
-import { SectionQuick } from "./sections/09-quick";
+import { SectionAudience } from "./sections/04-audience";
+import { SectionCautions } from "./sections/05-cautions";
+import { SectionFinal } from "./sections/06-final";
 
 export function ArticleDoc() {
   return (
     <Article toc width="wide">
       <Hero
-        eyebrow="ILUXRED PRODUCT COMPARISON"
-        title="ILUXRED 1500W 红光理疗灯 vs 红光能量毯"
-        subtitle="7波长12模式的局部深层设备，与三波长贴合式全身睡垫，应该怎么选？"
+        eyebrow="RED LIGHT DEVICE SELECTOR"
+        title="大红光还是能量毯？"
+        subtitle="回答3个问题，1分钟找到适合自己的红光设备。"
         meta={[
-          { label: "内容", value: "100% 保留" },
-          { label: "产品", value: "2款" },
-          { label: "形式", value: "手机 / 桌面响应式" },
+          { label: "决策助手", value: "3个问题" },
+          { label: "核心差异", value: "6项" },
+          { label: "信息", value: "科普参考" },
         ]}
       />
       <Lead>
-        这篇对比完整保留两款产品的参数、特点、适用人群、能量毯规格、FAQ和售后信息，并通过参数矩阵、场景选择和选购助手帮助你快速完成判断。
+        这份页面只保留帮助选择所需的信息：两款产品分别适合谁、核心差异是什么、购买前要注意什么。产品参数和图片请分别到各自产品详情页查看。
       </Lead>
 
-      <SectionOverview />
-      <SectionMatrix />
+      <SectionDecision />
+      <SectionSelector />
       <SectionDifferences />
-      <SectionLampFeatures />
-      <SectionBlanketFeatures />
-      <SectionBlanketInfo />
       <SectionAudience />
-      <SectionPurchase />
-      <SectionQuick />
+      <SectionCautions />
+      <SectionFinal />
 
       <Conclusion
-        title="选择从使用方式开始"
+        title="记住一句话"
         takeaways={[
-          "局部深层、面部美容、专业参数和固定安装：优先看ILUXRED 1500W红光理疗灯。",
-          "全身覆盖、颈部护理、简单操作和便携收纳：优先看红光能量毯。",
-          "局部强化与全身覆盖都需要：两款组合使用。",
-          "购买前确认使用限制、售后规则和身体情况，避免只看单一参数。",
+          "局部、深层、面部和调参数：优先大红光。",
+          "全身、贴合、颈部和便携：优先能量毯。",
+          "两类需求都明显：组合使用。",
         ]}
       >
-        <p>大红光与能量毯不是简单的强弱替代关系，而是面向不同使用路径的两类设备。先确定你更需要“定点深层”还是“全身贴合”，再由具体参数决定最终产品。</p>
+        <p>先确定核心使用方式，再考虑具体参数，更容易做出适合自己的选择。</p>
       </Conclusion>
 
       <Raw title="">
@@ -63,7 +56,6 @@ export function ArticleDoc() {
         >
           本平台所有内容为科普信息整理，仅供科研参考与信息分享，不构成医疗建议或疾病诊疗依据。<br />
           请结合专业医师或营养师意见判断。© 2026 正分子营养
-        
         </footer>
       </Raw>
     </Article>
