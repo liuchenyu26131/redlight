@@ -4,7 +4,7 @@ import { ComparisonMatrix } from "../raw-blocks/ComparisonMatrix";
 export function SectionDifferences() {
   return (
     <Section index="03" title="只看6项核心差异">
-      <p>先比较真正影响选择的6项内容，不再让用户阅读大量技术细节。</p>
+      <p>以下6项决定实际使用体验。先看使用方式和覆盖重点，再比较其他参数。</p>
       <Raw title="核心差异对照">
         <ComparisonMatrix />
       </Raw>
