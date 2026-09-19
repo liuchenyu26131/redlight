@@ -11,7 +11,7 @@
 - 选购助手：4 个问题生成推荐结果
 - 图片画廊：筛选、点击放大和大图关闭
 - 能量毯规格、FAQ、售后和日常使用节奏完整保留
-- 构建后输出单文件 `docs/index.html`，可离线打开或直接静态托管
+- 构建后输出约 1KB 的 `docs/index.html` 壳，图片、JS 和 CSS 通过 GitHub + jsDelivr CDN 加载
 
 ## 本地开发
 
@@ -26,7 +26,9 @@ npm run dev
 npm run static
 ```
 
-静态部署目录：`docs/`
+静态部署目录：`docs/`（仅 HTML 壳，适配 2MB 以内的小空间）
+
+CDN 资源目录：`cdn/assets/`（推送到 GitHub 后由 jsDelivr 提供）
 
 ## 静态托管
 
@@ -68,8 +70,9 @@ source/             原始 Markdown 和抽取说明
 plan/               编辑方案
 review/             终审记录
 article/            React 文章源码、交互组件和素材
+cdn/assets/         jsDelivr 加载的 JS、CSS 和图片
 article/assets/     页面使用的 WebP 图片
-docs/               可直接部署的静态单文件
+docs/               约 1KB 的静态 HTML 壳
 scripts/            构建与静态打包脚本
 .github/workflows/  gh-pages 自动发布
 ```

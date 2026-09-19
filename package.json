@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
+    "build:static": "tsc --noEmit && vite build --config vite.static.config.ts",
     "html": "npm run build && node scripts/copy-artifact.mjs",
-    "static": "npm run build && node scripts/copy-static.mjs",
+    "static": "npm run build:static && node scripts/copy-static.mjs",
     "typecheck": "tsc --noEmit",
     "preview": "vite preview"
   },

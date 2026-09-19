@@ -1,16 +1,23 @@
-import lampProduct from "./assets/lamp-product.webp";
-import lampSpectrum from "./assets/lamp-spectrum.webp";
-import lampBeautyRhythm from "./assets/lamp-beauty-rhythm.webp";
-import lampHardware from "./assets/lamp-hardware.webp";
-import lampCertifications from "./assets/lamp-certifications.webp";
-import lampSpecs from "./assets/lamp-specs.webp";
-import blanketHero from "./assets/blanket-hero.webp";
-import blanketFull from "./assets/blanket-full.webp";
-import blanketNeck from "./assets/blanket-neck.webp";
-import blanketMaterial from "./assets/blanket-material.webp";
-import blanketWavelength from "./assets/blanket-wavelength.webp";
-import blanketGlow from "./assets/blanket-glow.webp";
-import blanketCta from "./assets/blanket-cta.webp";
+const CDN_BASE = import.meta.env.VITE_ASSET_BASE
+  ?? "https://fastly.jsdelivr.net/gh/liuchenyu26131/redlight@main/article/assets/";
+
+const asset = (name: string) => import.meta.env.DEV
+  ? new URL(`./assets/${name}`, import.meta.url).href
+  : `${CDN_BASE}${name}`;
+
+const lampProduct = asset("lamp-product.webp");
+const lampSpectrum = asset("lamp-spectrum.webp");
+const lampBeautyRhythm = asset("lamp-beauty-rhythm.webp");
+const lampHardware = asset("lamp-hardware.webp");
+const lampCertifications = asset("lamp-certifications.webp");
+const lampSpecs = asset("lamp-specs.webp");
+const blanketHero = asset("blanket-hero.webp");
+const blanketFull = asset("blanket-full.webp");
+const blanketNeck = asset("blanket-neck.webp");
+const blanketMaterial = asset("blanket-material.webp");
+const blanketWavelength = asset("blanket-wavelength.webp");
+const blanketGlow = asset("blanket-glow.webp");
+const blanketCta = asset("blanket-cta.webp");
 
 export const media = {
   lampProduct,
