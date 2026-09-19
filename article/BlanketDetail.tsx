@@ -1,5 +1,6 @@
-import { Article, Aside, Detail, Hero, Image, Lead, Raw, Section, Table } from "reacticle";
+import { Article, Aside, Detail, Hero, Lead, Raw, Section, Table } from "reacticle";
 import { blanketMedia } from "./blanketMedia";
+import { ZoomableImage } from "./ImageZoom";
 import { navigateToView } from "./ViewTabs";
 
 const wavelengthColumns = [
@@ -45,7 +46,7 @@ export function BlanketDetail() {
       />
       <Lead>忙了一天，回家躺下来放松一会儿。在家安排自己的红光护理时间。</Lead>
 
-      <Image src={blanketMedia.hero} alt="红光能量毯产品图" caption="一张能量毯，兼顾全身覆盖和颈部护理。" ratio="1207/683" />
+      <ZoomableImage src={blanketMedia.hero} alt="红光能量毯产品图" caption="一张能量毯，兼顾全身覆盖和颈部护理。" ratio="1207/683" />
 
       <Section index="01" title="自由选择，一张能量毯，两张能量睡袋">
         <p>独立颈枕、颈部同步受光、多档调节、定时关闭和1200颗灯珠，组合成一张适合居家使用的红光能量毯。</p>
@@ -53,7 +54,7 @@ export function BlanketDetail() {
           <strong>1200<small>颗灯珠</small></strong>
           <strong>3600<small>束光 · 全矩阵覆盖</small></strong>
         </div>
-        <Image src={blanketMedia.glow} alt="红光能量毯光疗覆盖效果" ratio="1240/697" />
+        <ZoomableImage src={blanketMedia.glow} alt="红光能量毯光疗覆盖效果" ratio="1240/697" />
         <div className="iluxred-detail-grid">
           <article><h3>独立颈枕</h3><p>颈部同步受光护理。</p></article>
           <article><h3>多档调节</h3><p>5档光强按需调节。</p></article>
@@ -63,7 +64,7 @@ export function BlanketDetail() {
 
       <Section index="02" title="红光颈枕，家用随身两用">
         <p>独立可拆卸设计，在家是颈枕，出门是随身红光垫。</p>
-        <Image src={blanketMedia.neck} alt="红光能量毯独立颈部红光枕" ratio="690/693" />
+        <ZoomableImage src={blanketMedia.neck} alt="红光能量毯独立颈部红光枕" ratio="690/693" />
         <div className="iluxred-detail-stats">
           <strong>80<small>颗灯珠</small></strong>
           <strong>240<small>束光</small></strong>
@@ -77,13 +78,13 @@ export function BlanketDetail() {
 
       <Section index="03" title="三波长协同，层层作用">
         <p>红光与近红外协同作用，从皮肤表层到深层组织，多维度覆盖。</p>
-        <Image src={blanketMedia.wavelength} alt="红光能量毯三波长作用示意" ratio="1240/698" />
+        <ZoomableImage src={blanketMedia.wavelength} alt="红光能量毯三波长作用示意" ratio="1240/698" />
         <Table columns={wavelengthColumns} rows={wavelengthRows} />
       </Section>
 
       <Section index="04" title="舒适贴合，一擦即净">
         <p>皮革EVA材质，柔软贴合身体曲线，防水防污，日常清洁省心。</p>
-        <Image src={blanketMedia.material} alt="红光能量毯EVA材质细节" ratio="868/697" />
+        <ZoomableImage src={blanketMedia.material} alt="红光能量毯EVA材质细节" ratio="868/697" />
         <div className="iluxred-detail-grid">
           <article><h3>皮革EVA</h3><p>柔软贴合身体，躺卧舒适不硌身。</p></article>
           <article><h3>防水防污</h3><p>出汗、水渍不渗透，湿布一擦就干净。</p></article>
@@ -125,7 +126,7 @@ export function BlanketDetail() {
 
       <Section index="09" title="现在开始，每天20分钟红光护理">
         <p>不用预约，不用出门。把红光护理安排在自己家里。</p>
-        <Image src={blanketMedia.cta} alt="红光能量毯居家使用场景" ratio="900/1382" />
+        <ZoomableImage src={blanketMedia.cta} alt="红光能量毯居家使用场景" ratio="900/1382" />
         <Raw title="购买与返回">
           <div className="iluxred-detail-actions">
             <a className="iluxred-detail-primary" href="#">立即购买 →</a>

@@ -1,4 +1,5 @@
 import { Article, Raw } from "reacticle";
+import { ZoomableImage } from "./ImageZoom";
 import { navigateToView } from "./ViewTabs";
 
 type DetailImage = {
@@ -23,12 +24,12 @@ export function StackedImageDetail({ eyebrow, title, images }: StackedImageDetai
           </header>
 
           {images.map((image, index) => (
-            <img
+            <ZoomableImage
               key={image.src}
               src={image.src}
               alt={image.alt}
-              loading={index === 0 ? "eager" : "lazy"}
-              decoding="async"
+              eager={index === 0}
+              className="iluxred-image-detail__item"
             />
           ))}
 
