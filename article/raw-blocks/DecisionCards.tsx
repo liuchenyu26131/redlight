@@ -1,3 +1,5 @@
+import { navigateToView } from "../ViewTabs";
+
 const products = [
   {
     id: "lamp",
@@ -26,6 +28,9 @@ export function DecisionCards() {
           <ul className="iluxred-product__metrics">
             {product.points.map((point) => <li key={point}>{point}</li>)}
           </ul>
+          {product.id === "blanket" ? (
+            <button type="button" className="iluxred-detail-link" onClick={() => navigateToView("blanket")}>查看能量毯详情 →</button>
+          ) : null}
         </article>
       ))}
     </div>
