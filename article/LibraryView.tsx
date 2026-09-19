@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Article, Raw } from "reacticle";
-import { libraryGroups, type LibraryResource } from "./libraryMedia";
+import { baiduBackup, libraryGroups, type LibraryResource } from "./libraryMedia";
 import { navigateToView } from "./ViewTabs";
 
 export function LibraryView() {
@@ -55,6 +55,10 @@ export function LibraryView() {
                     ) : (
                       <p className="iluxred-library-card__copyright">版权待确认，本页暂不公开托管。</p>
                     )}
+                    <div className="iluxred-library-card__backup">
+                      <a href={baiduBackup.url} target="_blank" rel="noopener noreferrer">百度网盘备用下载 ↗</a>
+                      <span>提取码：{baiduBackup.code}</span>
+                    </div>
                   </article>
                 ))}
               </div>

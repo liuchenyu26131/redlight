@@ -5,6 +5,11 @@ const resource = (name: string) => import.meta.env.DEV
   ? `/article/resources/${name}`
   : `${RESOURCE_BASE}${name}`;
 
+export const baiduBackup = {
+  url: "https://pan.baidu.com/s/1E_flw5VdaZLaWoARDfHGxg?pwd=0919",
+  code: "0919",
+};
+
 export type LibraryResource = {
   id: string;
   title: string;
