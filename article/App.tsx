@@ -1,7 +1,9 @@
 import { ArticleDoc } from "./Article";
 import { BlanketDetail } from "./BlanketDetail";
 import { Cover } from "./Cover";
+import { HairCapDetail } from "./HairCapDetail";
 import { LampDetail } from "./LampDetail";
+import { PmDetail } from "./PmDetail";
 import { SiteControls } from "./SiteControls";
 import { useHashView, ViewTabs } from "./ViewTabs";
 
@@ -18,8 +20,12 @@ export function App() {
         </>
       ) : view === "blanket" ? (
         <BlanketDetail />
-      ) : (
+      ) : view === "lamp" ? (
         <LampDetail />
+      ) : view === "pm" ? (
+        <PmDetail />
+      ) : (
+        <HairCapDetail />
       )}
     </div>
   );
