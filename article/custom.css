@@ -65,7 +65,7 @@
   padding-top: var(--ra-space-3);
 }
 
-.iluxred-product[data-product="blanket"] {
+.iluxred-product[data-kind="blanket"] {
   border-top-color: var(--ra-color-heading);
 }
 
@@ -137,6 +137,23 @@
   font-weight: var(--ra-weight-semibold);
 }
 
+.iluxred-matrix__cell[data-kind="lamp"] {
+  background: color-mix(in srgb, var(--ra-color-accent-soft) 68%, var(--ra-color-bg));
+  box-shadow: inset 3px 0 0 var(--ra-color-accent);
+}
+
+.iluxred-matrix__cell[data-kind="blanket"] {
+  background: color-mix(in srgb, var(--ra-color-surface) 78%, var(--ra-color-bg));
+  box-shadow: inset 3px 0 0 var(--ra-color-border-strong);
+}
+
+.iluxred-matrix__head .iluxred-matrix__cell[data-kind="lamp"] {
+  color: var(--ra-color-accent-strong);
+}
+
+.iluxred-matrix__head .iluxred-matrix__cell[data-kind="blanket"] {
+  color: var(--ra-color-heading);
+}
 .iluxred-matrix__head {
   border-bottom: 2px solid var(--ra-color-heading);
   font-weight: var(--ra-weight-bold);
@@ -353,7 +370,24 @@
     grid-template-columns: 1fr;
   }
 
-  .iluxred-matrix__head {
+  .iluxred-matrix__cell[data-kind="lamp"] {
+  background: color-mix(in srgb, var(--ra-color-accent-soft) 68%, var(--ra-color-bg));
+  box-shadow: inset 3px 0 0 var(--ra-color-accent);
+}
+
+.iluxred-matrix__cell[data-kind="blanket"] {
+  background: color-mix(in srgb, var(--ra-color-surface) 78%, var(--ra-color-bg));
+  box-shadow: inset 3px 0 0 var(--ra-color-border-strong);
+}
+
+.iluxred-matrix__head .iluxred-matrix__cell[data-kind="lamp"] {
+  color: var(--ra-color-accent-strong);
+}
+
+.iluxred-matrix__head .iluxred-matrix__cell[data-kind="blanket"] {
+  color: var(--ra-color-heading);
+}
+.iluxred-matrix__head {
     display: none;
   }
 
@@ -383,6 +417,21 @@
     color: var(--ra-color-heading);
   }
 
+  .iluxred-matrix__cell[data-kind="lamp"] {
+    background: color-mix(in srgb, var(--ra-color-accent-soft) 52%, var(--ra-color-bg));
+  }
+
+  .iluxred-matrix__cell[data-kind="blanket"] {
+    background: color-mix(in srgb, var(--ra-color-surface) 64%, var(--ra-color-bg));
+  }
+
+  .iluxred-matrix__cell[data-kind="lamp"]::before {
+    color: var(--ra-color-accent-strong);
+  }
+
+  .iluxred-matrix__cell[data-kind="blanket"]::before {
+    color: var(--ra-color-heading);
+  }
   .iluxred-matrix__cell::before {
     content: attr(data-product);
     color: var(--ra-color-muted);
