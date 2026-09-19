@@ -27,7 +27,7 @@ const specRows = [
   { item: "光强档位", value: "5档可调" },
   { item: "定时设置", value: "10/20/30/40/50/60分钟，到点自动关机" },
   { item: "表面材质", value: "皮革EVA（防水防污，一擦即净）" },
-  { item: "包装清单", value: "主机×1、颈部红光枕×1、3C电源线×1、3C认证电源×1、控制器×1、公对公DC线×1" },
+  { item: "包装清单", value: <>主机×1、颈部红光枕×1、<br />3C电源线×1、3C认证电源×1、<br />控制器×1、公对公DC线×1</> },
 ];
 
 export function BlanketDetail() {

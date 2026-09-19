@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export type AppView = "select" | "blanket";
+export type AppView = "select" | "blanket" | "lamp";
 
 export function navigateToView(view: AppView) {
   const next = `#${view}`;
@@ -12,7 +12,11 @@ export function navigateToView(view: AppView) {
 }
 
 export function useHashView(): AppView {
-  const read = (): AppView => window.location.hash === "#blanket" ? "blanket" : "select";
+  const read = (): AppView => {
+    if (window.location.hash === "#blanket") return "blanket";
+    if (window.location.hash === "#lamp") return "lamp";
+    return "select";
+  };
   const [view, setView] = useState<AppView>(read);
 
   useEffect(() => {
@@ -36,8 +40,11 @@ export function ViewTabs({ view }: { view: AppView }) {
       <button type="button" className="iluxred-view-tab" aria-current={view === "select" ? "page" : undefined} onClick={() => navigateToView("select")}>
         帮我选
       </button>
+      <button type="button" className="iluxred-view-tab" aria-current={view === "lamp" ? "page" : undefined} onClick={() => navigateToView("lamp")}>
+        大红光详情
+      </button>
       <button type="button" className="iluxred-view-tab" aria-current={view === "blanket" ? "page" : undefined} onClick={() => navigateToView("blanket")}>
-        能量毯详情
+        红光能量毯详情
       </button>
     </nav>
   );

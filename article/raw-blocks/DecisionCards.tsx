@@ -29,7 +29,9 @@ export function DecisionCards() {
             {product.points.map((point) => <li key={point}>{point}</li>)}
           </ul>
           {product.id === "blanket" ? (
-            <button type="button" className="iluxred-detail-link" onClick={() => navigateToView("blanket")}>查看能量毯详情 →</button>
+            <button type="button" className="iluxred-detail-link" onClick={() => navigateToView("blanket")}>查看红光能量毯详情 →</button>
+          ) : product.id === "lamp" ? (
+            <button type="button" className="iluxred-detail-link" onClick={() => navigateToView("lamp")}>查看ILUXRED大红光详情 →</button>
           ) : null}
         </article>
       ))}
