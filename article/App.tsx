@@ -4,6 +4,7 @@ import { Cover } from "./Cover";
 import { HairCapDetail } from "./HairCapDetail";
 import { ImageZoomProvider } from "./ImageZoom";
 import { LampDetail } from "./LampDetail";
+import { LibraryView } from "./LibraryView";
 import { PmDetail } from "./PmDetail";
 import { SiteControls } from "./SiteControls";
 import { useHashView, ViewTabs } from "./ViewTabs";
@@ -20,6 +21,8 @@ export function App() {
             <Cover />
             <ArticleDoc />
           </>
+        ) : view === "library" ? (
+          <LibraryView />
         ) : view === "blanket" ? (
           <BlanketDetail />
         ) : view === "lamp" ? (

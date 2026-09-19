@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export type AppView = "select" | "blanket" | "lamp" | "pm" | "cap";
+export type AppView = "select" | "library" | "blanket" | "lamp" | "pm" | "cap";
 
 export function navigateToView(view: AppView) {
   const next = `#${view}`;
@@ -13,6 +13,7 @@ export function navigateToView(view: AppView) {
 
 export function useHashView(): AppView {
   const read = (): AppView => {
+    if (window.location.hash === "#library") return "library";
     if (window.location.hash === "#blanket") return "blanket";
     if (window.location.hash === "#lamp") return "lamp";
     if (window.location.hash === "#pm") return "pm";
@@ -40,6 +41,7 @@ export function ViewTabs({ view }: { view: AppView }) {
   return (
     <nav className="iluxred-view-tabs" aria-label="页面视图">
       <button type="button" className="iluxred-view-tab" aria-current={view === "select" ? "page" : undefined} onClick={() => navigateToView("select")}>帮我选</button>
+      <button type="button" className="iluxred-view-tab" aria-current={view === "library" ? "page" : undefined} onClick={() => navigateToView("library")}>红光学习资料</button>
       <button type="button" className="iluxred-view-tab" aria-current={view === "lamp" ? "page" : undefined} onClick={() => navigateToView("lamp")}>大红光详情</button>
       <button type="button" className="iluxred-view-tab" aria-current={view === "blanket" ? "page" : undefined} onClick={() => navigateToView("blanket")}>红光能量毯详情</button>
       <button type="button" className="iluxred-view-tab" aria-current={view === "pm" ? "page" : undefined} onClick={() => navigateToView("pm")}>PM红光头戴详情</button>
