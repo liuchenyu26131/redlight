@@ -15,7 +15,7 @@ const wavelengthRows = [
 ];
 
 const specColumns = [
-  { key: "item", label: "项目", width: "5em" },
+  { key: "item", label: "项目", width: "5.5em" },
   { key: "value", label: "规格" },
 ];
 
@@ -109,7 +109,9 @@ export function BlanketDetail() {
       </Section>
 
       <Section index="07" title="产品规格">
-        <Table columns={specColumns} rows={specRows} />
+        <div className="iluxred-spec-table">
+          <Table columns={specColumns} rows={specRows} />
+        </div>
       </Section>
 
       <Section index="08" title="售后保障，买得放心">

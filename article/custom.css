@@ -594,3 +594,11 @@
     font-size: var(--ra-text-sm);
   }
 }
+.iluxred-spec-table .ra-table__table th:first-child,
+.iluxred-spec-table .ra-table__table td:first-child {
+  inline-size: 5.5em;
+  min-inline-size: 5.5em;
+  max-inline-size: 5.5em;
+  white-space: nowrap;
+  word-break: keep-all;
+}
