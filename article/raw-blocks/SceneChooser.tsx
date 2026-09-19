@@ -8,6 +8,11 @@ const sceneImage = {
   both: media.blanketFull,
 } as const;
 
+const shortProductName = {
+  lamp: "大红光",
+  blanket: "能量毯",
+  both: "组合",
+} as const;
 const productName = {
   lamp: "优先选择 ILUXRED 1500W 红光理疗灯",
   blanket: "优先选择红光能量毯",
@@ -30,7 +35,11 @@ export function SceneChooser() {
               className="iluxred-scene__button"
               onClick={() => setActiveId(scene.id)}
             >
-              {scene.label}
+              <span className="iluxred-scene__button-text">
+                <strong>{scene.label}</strong>
+                <small>{scene.short}</small>
+              </span>
+              <span className="iluxred-scene__tag">推荐：{shortProductName[scene.recommendation]}</span>
             </button>
           ))}
         </div>

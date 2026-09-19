@@ -146,9 +146,13 @@
 .iluxred-scene__button {
   appearance: none;
   width: 100%;
-  min-height: 52px;
+  min-height: 64px;
   text-align: left;
-  border: 1px solid var(--ra-color-border-strong);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ra-space-3);  border: 1px solid var(--ra-color-border-strong);
   border-right: 0;
   border-bottom: 0;
   background: transparent;
@@ -162,6 +166,39 @@
   border-bottom: 1px solid var(--ra-color-border-strong);
 }
 
+.iluxred-scene__button-text {
+  display: grid;
+  gap: var(--ra-space-1);
+  min-width: 0;
+}
+
+.iluxred-scene__button-text strong {
+  color: inherit;
+}
+
+.iluxred-scene__button-text small {
+  color: var(--ra-color-muted);
+  font-size: var(--ra-text-xs);
+  line-height: var(--ra-leading-snug);
+}
+
+.iluxred-scene__tag {
+  flex: 0 0 auto;
+  border: 1px solid var(--ra-color-border-strong);
+  padding: .18em .55em;
+  font-family: var(--ra-font-label);
+  font-size: var(--ra-text-xs);
+  font-weight: var(--ra-weight-bold);
+  color: var(--ra-color-accent);
+}
+.iluxred-scene__button[aria-pressed="true"] .iluxred-scene__button-text small {
+  color: color-mix(in srgb, var(--ra-color-bg) 72%, transparent);
+}
+
+.iluxred-scene__button[aria-pressed="true"] .iluxred-scene__tag {
+  color: var(--ra-color-bg);
+  border-color: color-mix(in srgb, var(--ra-color-bg) 46%, transparent);
+}
 .iluxred-scene__button[aria-pressed="true"] {
   background: var(--ra-color-heading);
   color: var(--ra-color-bg);

@@ -23,7 +23,7 @@ const audienceTableRows = audienceRows.map((row) => ({
 export function SectionAudience() {
   return (
     <Section index="07" title="哪类人群适合哪种设备">
-      <p>先选择一个最接近自己的使用场景，页面会给出即时建议；下方表格完整保留全部13类需求和对应原因。</p>
+      <p>每个场景已经直接标注推荐设备，点击后可查看详细原因；下方表格完整保留全部13类需求和对应原因。</p>
 
       <Raw title="按场景查看推荐设备">
         <SceneChooser />
